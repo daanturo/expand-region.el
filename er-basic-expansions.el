@@ -239,7 +239,8 @@ period and marks next symbol."
                 er/mark-comment
                 er/mark-url
                 er/mark-email
-                er/mark-defun)
+                er/mark-defun
+                er/treesit-er-parent-node)
               er/try-expand-list))
 
 (provide 'er-basic-expansions)
