@@ -239,9 +239,12 @@ period and marks next symbol."
                 er/mark-comment
                 er/mark-url
                 er/mark-email
-                er/mark-defun
-                er/treesit-er-parent-node)
+                er/mark-defun)
               er/try-expand-list))
+
+(when (ignore-errors
+        (treesit-available-p))
+  (append '(er/treesit-mark-bigger-list-or-node) er/try-expand-list))
 
 (provide 'er-basic-expansions)
 ;;; er-basic-expansions.el ends here
